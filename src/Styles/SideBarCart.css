@@ -1,0 +1,49 @@
+.SidebarContainer{
+    background-color: #ffffff;
+    width: 37%;
+    height: 90vh;
+    top:50px;
+    left: 0;
+    position: fixed;
+    transform: translateX(165%);
+    transform: translateY(-165%);
+    transition: all 0.4s;
+    padding: 10px;
+}
+.SidebarContainerOpen{
+    transform: translateX(165%);
+}
+.SidebarFooter{
+    position: fixed;
+    background-color: #f6f6f6;
+    height: 15vh;
+    padding: 15px;
+    box-shadow: 0.5px 0.5px rgb(86, 85, 85);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+.photoProduitPanier{
+    background-size: cover;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    box-shadow: -3px -3px 7px rgb(125, 123, 123),3px 3px 5px rgb(255, 255, 255);
+}
+.SidebarBody{
+    display:flex;
+}
+.container-price{
+    display:flex;
+}
+.titleAndDelete{
+    display: flex;
+}
+.container-footer{
+    display: flex;
+}
+.Total{
+    margin-top: 20px;
+}

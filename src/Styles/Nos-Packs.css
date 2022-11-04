@@ -1,0 +1,14 @@
+.titre-Packs{
+    color: #ff3700;
+    padding: 10px;
+}
+.div-nos-packs{
+    padding: 10px;
+}
+.PhotoPack{
+    width: 140px;
+    height: 140px;
+    border-radius : 20%;
+    background-size: cover;
+    box-shadow: 4px 4px 3px 4px rgb(181, 177, 177);
+}

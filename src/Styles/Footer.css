@@ -1,0 +1,32 @@
+.Footer{
+    background: white;
+    margin : 0;
+    padding: 0;
+    height: 200px;
+}
+.Footer-slogan{
+    color:#6f6d6d;
+    padding-top: 50px;
+}
+.Footer-Copyright{
+    color:#6f6d6d;
+}
+ul{
+    list-style-type: none;
+    color:#6f6d6d;
+}
+.FooterCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.FooterLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.FooterRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

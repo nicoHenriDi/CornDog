@@ -1,0 +1,21 @@
+.titre-Produit{
+    color: #ff3700;
+    padding: 10px ;
+}
+.PhotoChapelurePain{
+    width: 140px;
+    height: 140px;
+    border-radius : 20%;
+    background-size: cover;
+    box-shadow: 4px 4px 3px 4px rgb(181, 177, 177);
+}
+.Nom-produit{
+    color:#ff3700;
+    padding: 8px;
+    margin:0;
+}
+.Prix-Produit{
+    color:#4c4c4c;
+    padding :10px;
+    margin:0px;
+}

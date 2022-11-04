@@ -1,0 +1,30 @@
+
+*{
+    padding: 0;
+    margin:0;
+}
+.loading-div{
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+.LoadingName{
+    color: #1D2F6F;
+    padding: 0;
+    margin-top: 0;
+    text-shadow: 2px 2px black;
+}
+.LoadingPhoto{
+    padding: 0;
+    position: relative;
+    bottom: -75px;
+    right: 10px;
+    margin-top: 30px;
+    background-size: cover;
+}
+
+
