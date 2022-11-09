@@ -18,19 +18,25 @@ const db = mysql.createConnection({
 //for Database 
 
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post("/api/insert",(req,res)=>{
 
-    const formLastName =req.body.formLastName;
-    const formName =req.body.formName;
-    const formAdresse =req.body.formAdresse;
-    const formTelephone =req.body.formTelephone;
-    const formEmail=req.body.formEmail;
+    const formLastName =req.body.form.formLastName;
+    const formName =req.body.form.formName;
+    const formAdresse =req.body.form.formAdresse;
+    const formTelephone =req.body.form.formTelephone;
+    const formEmail=req.body.form.formEmail;
+    const produitCommander=req.body.form.produitCommander;
+    const listProduit =JSON.stringify(produitCommander);
+    // const listProduit =req.body.form.listProduit;
 
-    const sqlInsert = "INSERT INTO commandecorndog (nomClient, prenomClient, adresseClient, telephoneClient,emailClient) VALUES (?,?,?,?,?)";
-    db.query(sqlInsert,[formLastName,formName,formAdresse,formTelephone,formEmail], (err,result)=>{
+    
+    console.log("c'est là E : "+formEmail);
+
+    const sqlInsert = "INSERT INTO commandecorndog (nomClient, prenomClient, adresseClient, telephoneClient,emailClient,produitCommander) VALUES (?,?,?,?,?,?)";
+    db.query(sqlInsert,[formLastName,formName,formAdresse,formTelephone,formEmail,listProduit], (err,result)=>{
         console.log(result);
     });
 
@@ -40,6 +46,7 @@ app.post("/api/insert",(req,res)=>{
     const nameString =formName;
     const lastNameString =formLastName;
     const adresseString =formAdresse;
+    // const listProduitString =listProduit;
 
     const textSms="Hello"+" "+
     "Parfait votre commande a bien ete pris en compte"+" \n"+
@@ -52,7 +59,8 @@ app.post("/api/insert",(req,res)=>{
     client.messages.create({
         body: textSms,
         from:"+18583302085",
-        to:telephoneString
+        to:telephoneString//pour le moment il n'y a que le numéro enregistrer sur twilio qui marche
+                          //il faut faire une prescription pour pouvoir avoir d'autres numéro
     }).then(message => console.log(message.sid));
 
 });

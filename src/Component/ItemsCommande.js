@@ -5,7 +5,9 @@ import '../Styles/ItemsCommande.css'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 function ItemsCommande(props){
+
     const  { removeItem }  =  useCart () ;
+
     return(
         <div className="container-commande" key={props.id} style={{padding:"5px"}}>
                 <div className="Info-produit">
