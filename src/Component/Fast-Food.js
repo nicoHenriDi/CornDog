@@ -5,60 +5,15 @@ import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import ItemProduit from './ItemProduit';
-import Dropdown from 'react-bootstrap/Dropdown';
+// import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
-import FilterListIcon from '@mui/icons-material/FilterList';
-import SearchIcon from '@mui/icons-material/Search';
+// import FilterListIcon from '@mui/icons-material/FilterList';
+// import SearchIcon from '@mui/icons-material/Search';
 
-// The forwardRef is important!!
-// Dropdown needs access to the DOM node in order to position the Menu
-const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
-  <Button
-    href=""
-    ref={ref}
-    onClick={(e) => {
-      e.preventDefault();
-      onClick(e);
-    }}
-    style={{color:"gray"}}
-  >
-    {children}
-    &#x25bc;
-  </Button>
-));
-
-// forwardRef again here!
-// Dropdown needs access to the DOM of the Menu to measure it
-const CustomMenu = React.forwardRef(
-    ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
-      const [value, setValue] = useState("");
-  
-      return (
-        <div
-          ref={ref}
-          style={style}
-          className={className}
-          aria-labelledby={labeledBy}
-        >
-          <Form.Control
-            autoFocus
-            className="mx-3 my-2 w-auto"
-            placeholder="Type to filter..."
-            onChange={(e) => setValue(e.target.value)}
-            value={value}
-          />
-          <ul className="list-unstyled">
-            {React.Children.toArray(children).filter(
-              (child) =>
-                !value || child.props.children.toLowerCase().startsWith(value),
-            )}
-          </ul>
-        </div>
-      );
-    },
-  );
 
 function FastFood(){
 
@@ -66,11 +21,27 @@ function FastFood(){
         const [isLoaded, setIsLoaded] =useState(false);
         const [produits, setProduits] = useState([]);
         const [searchTerm,setSearchTerm] = useState("");
+        const [priceRange,setPriceRange] = useState("");
+
+        
 
         const handleSearchTerm = (e)=>{
             let value =e.target.value;
             setSearchTerm(value);
         }
+        const valuetext =(value)=>{
+            return (value);
+        }
+
+        const handleRange=(e)=>{
+          let val=e.target.value
+          setPriceRange(val);
+          console.log(val);
+        }
+        
+
+
+        
 
       
         // Remarque : le tableau vide de dépendances [] indique
@@ -104,20 +75,6 @@ function FastFood(){
             return(
                 <Container style={{paddingTop:"100px",height:"100%"}} fluid="md">
                     <Row className="m-2" >
-                        <Col className="Filtre-compoment text-center">
-                            <Dropdown>
-                                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-                                <FilterListIcon />  Filtres
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu as={CustomMenu}>
-                                <Dropdown.Item eventKey="1">Nom de produit</Dropdown.Item>
-                                <Dropdown.Item eventKey="2" >Ordre alphabétique</Dropdown.Item>
-                                <Dropdown.Item eventKey="3" >Prix</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Col>
-
                         {/*Barre de Recherche*/}
                         <Col>
                             <Form>
@@ -127,23 +84,46 @@ function FastFood(){
                                     className='form-control'
                                     onChange={handleSearchTerm}
                                     />
-                                    <Button className='btn'><SearchIcon/></Button>
                                 </Form.Group>
                             </Form>
                         </Col>
                     </Row>
                     <hr/>
                     <Row>
-                        {/* <Col lg={3} xs={3} md={3}>
-                            <ul>
-                              <li className="m-2"><strong>Corn Dog</strong></li>
-                              <li className="m-2"><strong>Frites au Chômage</strong></li>
-                              <li className="m-2"><strong>Nuggets</strong></li>
-                            </ul>
-                        </Col> */}
+                        <Col lg={3} xs={3} md={3}>
+                            <Col>
+                                <Box sx={{ width: 200 }}>
+                                  <p className="text-muted"><strong>Filtre Prix</strong></p>
+                                  <Slider
+                                    aria-label="Prix"
+                                    defaultValue={1000}
+                                    getAriaValueText={valuetext}
+                                    valueLabelDisplay="auto"
+                                    step={1000}
+                                    marks
+                                    min={1000}
+                                    max={15000}
+                                    type="range"
+                                    onChange={handleRange}
+                                    />
+                                </Box>
+                            </Col>
+                            <Col>
+                                <ul style={{display:"flex",flexDirection:"column"}}>
+                                  <li className="m-2"><strong>Corn Dog</strong></li>
+                                  <li className="m-2"><strong>Frites au Chômage</strong></li>
+                                  <li className="m-2"><strong>Nuggets</strong></li>
+                                </ul>
+                            </Col>
+                        </Col>
                         {produits.produits.filter((val)=>{
-                          return val.produitName.toLowerCase().includes(searchTerm.toLowerCase()) || val.price.includes(searchTerm);
-                        }).map((val,index) => (
+                          return (val.produitName.toLowerCase().includes(searchTerm.toLowerCase())) || val.price.includes(searchTerm);
+                        }).filter((prix)=>
+                        {
+                          return(
+                            prix.price.includes(priceRange)
+                            );}
+                        ).map((val,index) => (
                                                         <ItemProduit 
                                                                 key={index}
                                                                 img={val.imageProduit} 

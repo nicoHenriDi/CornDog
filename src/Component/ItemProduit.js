@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 function ItemProduit(props){
 
     const { addItem } = useCart();
+    
     return(
                                         <Col>
                                         <motion.div

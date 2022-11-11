@@ -33,9 +33,10 @@ function App() {
             loading ?
                 <LoadingComponent />
             :
-            <div>
+            <>
+              
               <CartProvider>
-                <NavBar />
+              <NavBar />
                         <ButtonFloating openSideBarCart={ToggleSideBarCart}/>
                         <BackgroundDrop SideBarCar={SideBarCar}/>
                         <SideBarCart SideBarCar={SideBarCar}/>
@@ -44,7 +45,7 @@ function App() {
                         </div>
                 <Footer />
               </CartProvider>
-            </div>
+            </>
           }
         </div>
   );

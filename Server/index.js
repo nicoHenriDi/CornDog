@@ -4,9 +4,17 @@ const cors = require("cors");
 const app = express();
 const mysql =require("mysql");
 
-const accountSid = "ACdba4bb18056cfb75be81ecd8d6379784";
-const authToken = "218a00d5030ccd873729af924775998c";
-const client = require('twilio')(accountSid, authToken);
+// const accountSid = "ACdba4bb18056cfb75be81ecd8d6379784";
+// const authToken = "218a00d5030ccd873729af924775998c";
+// const client = require('twilio')(accountSid, authToken);
+
+
+const {Vonage} = require('@vonage/server-sdk');
+
+const vonage = new Vonage({
+  apiKey: "92ad8771",
+  apiSecret: "uHegZJkiyXhpbj9n"
+})
 
 //for Database 
 const db = mysql.createConnection({
@@ -48,20 +56,39 @@ app.post("/api/insert",(req,res)=>{
     const adresseString =formAdresse;
     // const listProduitString =listProduit;
 
-    const textSms="Hello"+" "+
+    // const textSms="Hello"+" "+
+    // "Parfait votre commande a bien ete pris en compte"+" \n"+
+    // "Voici les informations relative a cette derniere :"+" \n"+
+    // "Prénom Client :"+" "+nameString+" \n"+
+    // "Nom Client :"+" "+lastNameString+" \n"+
+    // "Numéro Commande :"+" "+"Ref:000104112022"+" \n"+
+    // "Adresse de Livraison :"+" "+adresseString;
+    
+    // client.messages.create({
+    //     body: textSms,
+    //     from:"+18583302085",
+    //     to:telephoneString//pour le moment il n'y a que le numéro enregistrer sur twilio qui marche
+    //                       //il faut faire une prescription pour pouvoir avoir d'autres numéro
+    // }).then(message => console.log(message.sid));
+
+
+    const from = "Vonage APIs"
+    const to = telephoneString
+    const text = "Hello"+" "+
     "Parfait votre commande a bien ete pris en compte"+" \n"+
     "Voici les informations relative a cette derniere :"+" \n"+
     "Prénom Client :"+" "+nameString+" \n"+
     "Nom Client :"+" "+lastNameString+" \n"+
     "Numéro Commande :"+" "+"Ref:000104112022"+" \n"+
     "Adresse de Livraison :"+" "+adresseString;
+
+    async function sendSMS() {
+        await vonage.sms.send({to, from, text})
+            .then(resp => { console.log('Message sent successfully'); console.log(resp); })
+            .catch(err => { console.log('There was an error sending the messages.'); console.error(err); });
+    }
     
-    client.messages.create({
-        body: textSms,
-        from:"+18583302085",
-        to:telephoneString//pour le moment il n'y a que le numéro enregistrer sur twilio qui marche
-                          //il faut faire une prescription pour pouvoir avoir d'autres numéro
-    }).then(message => console.log(message.sid));
+    sendSMS();
 
 });
 

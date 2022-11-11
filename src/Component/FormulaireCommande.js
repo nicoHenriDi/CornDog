@@ -45,6 +45,8 @@ function FormulaireCommande(props){
               setValidated(true);
               event.preventDefault();
               if(form.checkValidity() === true){
+
+          //Permet de récupérer les produits commander
                 const produitCommander =[];
                     items.map((produit,index)=>(
                       produitCommander[index]=
@@ -55,6 +57,8 @@ function FormulaireCommande(props){
                           price: produit.price
                         }
                     ))
+          
+          //Api axios permettant permettant de poster les données vers le serveur
                   Axios.post("http://localhost:3001/api/insert",
                       { form :{
                         formLastName :formLastName,

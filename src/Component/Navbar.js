@@ -37,7 +37,8 @@ function NavBar(){
             {['sm'].map((expand) => (
             <Navbar key={expand} expand={expand} bg="white" 
             className={navbar ? 'Navbar active': 'Navbar '} 
-            style={{boxShadow:"3px 3px 5px rgb(86, 85, 85)"}}
+            style={{boxShadow:"3px 3px 5px rgb(86, 85, 85)",width:"100%"}}
+            fixed="top"
             >
                 <Container>
             <Navbar.Brand as={Link} to="/" className='Logo-Photo ms-1 p-0'>
