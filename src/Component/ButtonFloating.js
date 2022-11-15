@@ -6,6 +6,7 @@ function ButtonFloating({openSideBarCart}){
         <Fab aria-label="ShoppingCartIcon" className="ShoppingCartButton"
             style={{position:'fixed',bottom:50,right:40,background:"#ff3700",color:"white"}} 
             onClick={openSideBarCart}>
+               
                 <ShoppingCartIcon/>
         </Fab>
     );

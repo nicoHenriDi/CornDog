@@ -8,7 +8,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import Home from './Home';
 import FastFood from './Fast-Food';
-import Contact from './Contact';
+// import APropos from './APropos';
 
 //Image Logo
 import photoLogo from '../Image/logo-navbar.png';
@@ -60,7 +60,7 @@ function NavBar(){
                             <Nav className="me-auto" >
                                 <Nav.Link as={Link} to="/" className="text-black"><strong>NM Corn Dog</strong> </Nav.Link>
                                 <Nav.Link as={Link} to="Fast-Food" className="text-black"><strong>Fast-Food</strong></Nav.Link>
-                                <Nav.Link as={Link} to="Contact" className="text-black"><strong>Conctatez-Nous</strong></Nav.Link>
+                                {/* <Nav.Link as={Link} to="APropos" className="text-black"><strong>à Propos de Nous</strong></Nav.Link> */}
                             </Nav>
                             <button style={{border:"0",background:"white"}} className="ms-3">
                             <InstagramIcon />
@@ -71,9 +71,9 @@ function NavBar(){
                             <button style={{border:"0",background:"white"}} className="ms-3">
                                 <FacebookIcon />
                             </button>
-                            <button style={{border:"0",background:"white"}} className="ms-3">
+                            {/* <button style={{border:"0",background:"white"}} className="ms-3">
                                 <GitHubIcon />
-                            </button>
+                            </button> */}
               </Offcanvas.Body>
             </Navbar.Offcanvas>
                     </Container>
@@ -84,7 +84,7 @@ function NavBar(){
             <Routes>
                       <Route path="/" element={<Home />}/>
                       <Route path="/Fast-Food" element={<FastFood />}/>
-                      <Route path="/Contact" element={<Contact />}/>
+                      {/*<Route path="/APropos" element={<APropos />}/>*/}
             </Routes>
             </div>
         </BrowserRouter>
