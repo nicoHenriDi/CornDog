@@ -37,11 +37,11 @@ app.post("/api/insert",(req,res)=>{
     const formTelephone =req.body.form.formTelephone;
     const formEmail=req.body.form.formEmail;
     const produitCommander=req.body.form.produitCommander;
-    const listProduit =JSON.stringify(produitCommander);
+    const listProduit =JSON.stringify(produitCommander); //récupération liste commande et convertion en fichier JSON
     // const listProduit =req.body.form.listProduit;
 
     
-    console.log("c'est là E : "+formEmail);
+    // console.log("c'est là E : "+formEmail);
 
     const sqlInsert = "INSERT INTO commandecorndog (nomClient, prenomClient, adresseClient, telephoneClient,emailClient,produitCommander) VALUES (?,?,?,?,?,?)";
     db.query(sqlInsert,[formLastName,formName,formAdresse,formTelephone,formEmail,listProduit], (err,result)=>{
@@ -72,23 +72,23 @@ app.post("/api/insert",(req,res)=>{
     // }).then(message => console.log(message.sid));
 
 
-    const from = "Vonage APIs"
-    const to = telephoneString
-    const text = "Hello"+" "+
-    "Parfait votre commande a bien ete pris en compte"+" \n"+
-    "Voici les informations relative a cette derniere :"+" \n"+
-    "Prénom Client :"+" "+nameString+" \n"+
-    "Nom Client :"+" "+lastNameString+" \n"+
-    "Numéro Commande :"+" "+"Ref:000104112022"+" \n"+
-    "Adresse de Livraison :"+" "+adresseString;
+    // const from = "Vonage APIs"
+    // const to = telephoneString
+    // const text = "Hello"+" "+
+    // "Parfait votre commande a bien ete pris en compte"+" \n"+
+    // "Voici les informations relative a cette derniere :"+" \n"+
+    // "Prénom Client :"+" "+nameString+" \n"+
+    // "Nom Client :"+" "+lastNameString+" \n"+
+    // "Numéro Commande :"+" "+"Ref:000104112022"+" \n"+
+    // "Adresse de Livraison :"+" "+adresseString;
 
-    async function sendSMS() {
-        await vonage.sms.send({to, from, text})
-            .then(resp => { console.log('Message sent successfully'); console.log(resp); })
-            .catch(err => { console.log('There was an error sending the messages.'); console.error(err); });
-    }
+    // async function sendSMS() {
+    //     await vonage.sms.send({to, from, text})
+    //         .then(resp => { console.log('Message sent successfully'); console.log(resp); })
+    //         .catch(err => { console.log('There was an error sending the messages.'); console.error(err); });
+    // }
     
-    sendSMS();
+    // sendSMS();
 
 });
 

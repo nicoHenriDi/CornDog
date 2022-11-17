@@ -17,7 +17,7 @@ import photoLogo from '../Image/logo-navbar.png';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import GitHubIcon from '@mui/icons-material/GitHub';
+// import GitHubIcon from '@mui/icons-material/GitHub';
 
 function NavBar(){
     const [navbar,setNavbar]=useState(false);
@@ -62,18 +62,18 @@ function NavBar(){
                                 <Nav.Link as={Link} to="Fast-Food" className="text-black"><strong>Fast-Food</strong></Nav.Link>
                                 {/* <Nav.Link as={Link} to="APropos" className="text-black"><strong>à Propos de Nous</strong></Nav.Link> */}
                             </Nav>
-                            <button style={{border:"0",background:"white"}} className="ms-3">
+                            <button style={{border:"0",background:"white"}} className="ms-3 p-0">
                             <InstagramIcon />
                             </button>
-                            <button style={{border:"0",background:"white"}} className="ms-3">
+                          <button style={{border:"0",background:"white"}} className="ms-3 p-0">
                                 <GoogleIcon />
                             </button>
-                            <button style={{border:"0",background:"white"}} className="ms-3">
+                            <button style={{border:"0",background:"white"}} className="ms-3 p-0">
+                                <a href="https://www.facebook.com/Nentreprise.business?mibextid=ZbWKwL" target="_blank" rel="noreferrer">
                                 <FacebookIcon />
+                                </a>
                             </button>
-                            {/* <button style={{border:"0",background:"white"}} className="ms-3">
-                                <GitHubIcon />
-                            </button> */}
+                            <p className="mt-3 ms-3"><strong>+211-77-270-80-50</strong></p>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
                     </Container>

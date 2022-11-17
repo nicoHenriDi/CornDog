@@ -5,12 +5,11 @@
     height: 200px;
 }
 .Footer-slogan{
-    color:#6f6d6d;
     padding-top: 50px;
 }
-.Footer-Copyright{
+/* .Footer-Copyright{
     color:#6f6d6d;
-}
+} */
 ul{
     list-style-type: none;
     color:#6f6d6d;
