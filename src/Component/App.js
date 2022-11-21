@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import '../Styles/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingComponent from './LoadingComponent';
 import Footer from './Footer';
 import ButtonFloating from './ButtonFloating';

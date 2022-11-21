@@ -40,31 +40,31 @@ function SideBarCart({SideBarCar}){
                     style={{ boxShadow:"-3px -3px 7px rgb(125, 123, 123),3px 3px 5px rgba(255, 255, 255, 0.464)"}} 
                     key={index}>
                     <div className='SidebarBody'>
-                        <img  src={"Image/"+item.imageProduit} alt="Produit panier"  className='photoProduitPanier m-4'/>
+                        <img  src={"Image/"+item.imageProduit} alt="Produit panier"  className='photoProduitPanier'/>
                         <Card.Body >
                             <div className="titleAndDelete">
-                                <Card.Text className="text-muted" style={{fontSize: "17px",margin:"0"}}>
+                                <Card.Text className="title-card text-muted">
                                     <i>{item.produitName}</i>
                                 </Card.Text>
-                                <button className="ms-4" style={{fontSize: "small",background:"white",border:"0"}}
+                                <button className="bouton-delete " style={{fontSize: "small",background:"white",border:"0"}}
                                 onClick={()=>removeItem(item.id)}
                                 >
                                     <ClearIcon />
                                 </button>
                             </div>
                             <div className="container-price p-1">
-                                <button className="btn btn-primary btn-sm"
+                                <button className="bouton-moins btn btn-primary btn-sm"
                                     onClick={()=>updateItemQuantity(item.id,item.quantity - 1)}
                                 >
                                     <strong>-</strong>
                                 </button>
                                 <Card.Text className="m-2"><strong>{item.quantity}</strong></Card.Text>
-                                <button className="btn btn-primary btn-sm"
+                                <button className="bouton-plus btn btn-primary btn-sm"
                                     onClick={()=>updateItemQuantity(item.id,item.quantity + 1)}
                                 >
                                     <strong>+</strong>
                                 </button>
-                                <Card.Text className="ms-5"><strong>Fcfa {item.price * item.quantity}</strong></Card.Text>
+                                <Card.Text className="text-prix ms-5"><strong>Fcfa {item.price * item.quantity}</strong></Card.Text>
                             </div>
                         </Card.Body>
                     </div>

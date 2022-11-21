@@ -33,12 +33,12 @@ function NavBar(){
 
     return(
         <BrowserRouter>
-            <div>
             {['sm'].map((expand) => (
+                
             <Navbar key={expand} expand={expand} bg="white" 
             className={navbar ? 'Navbar active': 'Navbar '} 
-            style={{boxShadow:"3px 3px 5px rgb(86, 85, 85)",width:"100%"}}
-            fixed="top"
+            style={{boxShadow:"3px 3px 5px rgb(86, 85, 85)"}}
+            sticky="top"
             >
                 <Container>
             <Navbar.Brand as={Link} to="/" className='Logo-Photo ms-1 p-0'>
@@ -53,7 +53,7 @@ function NavBar(){
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  NM Corn Dog
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -62,6 +62,7 @@ function NavBar(){
                                 <Nav.Link as={Link} to="Fast-Food" className="text-black"><strong>Fast-Food</strong></Nav.Link>
                                 {/* <Nav.Link as={Link} to="APropos" className="text-black"><strong>à Propos de Nous</strong></Nav.Link> */}
                             </Nav>
+                            <h6 style={{border:"0",background:"white"}} className="ms-3 mt-3 p-0"><i><strong>Contactez nous :</strong></i></h6>
                             <button style={{border:"0",background:"white"}} className="ms-3 p-0">
                             <InstagramIcon />
                             </button>
@@ -76,18 +77,18 @@ function NavBar(){
                             <p className="mt-3 ms-3"><strong>+211-77-270-80-50</strong></p>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-                    </Container>
+            </Container>
                 </Navbar>
+                
             ))}
-            </div>
-            <div>
+            
+            
             <Routes>
                       <Route path="/" element={<Home />}/>
                       <Route path="/Fast-Food" element={<FastFood />}/>
                       {/*<Route path="/APropos" element={<APropos />}/>*/}
             </Routes>
-            </div>
-        </BrowserRouter>
+    </BrowserRouter>
     );
 }
 export default NavBar;

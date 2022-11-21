@@ -11,8 +11,13 @@ import Form from 'react-bootstrap/Form';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
+
+//icon 
 // import FilterListIcon from '@mui/icons-material/FilterList';
 // import SearchIcon from '@mui/icons-material/Search';
+import iconCornDog from "../Image/corn-dog-icon.png";
+import friesCheese from "../Image/fried-potatoes.png"
+import nuggets from "../Image/nuggets.png"
 
 
 function FastFood(){
@@ -36,13 +41,7 @@ function FastFood(){
         const handleRange=(e)=>{
           let val=e.target.value
           setPriceRange(val);
-          console.log(val);
         }
-        
-
-
-        
-
       
         // Remarque : le tableau vide de dépendances [] indique
         // que useEffect ne s’exécutera qu’une fois, un peu comme
@@ -90,9 +89,8 @@ function FastFood(){
                     </Row>
                     <hr/>
                     <Row>
-                        <Col lg={3} xs={3} md={3}>
-                            <Col>
-                                <Box sx={{ width: 200 }}>
+                        <Col style={{display:"flex",justifyContent:"center"}}>
+                                <Box sx={{ width: 230 ,height:300 ,display:"flex",flexDirection:"column",justifyContent:"center",alignContent:"center",alignItems:"center"}}>
                                   <p className="text-muted"><strong>Filtre Prix</strong></p>
                                   <Slider
                                     aria-label="Prix"
@@ -106,15 +104,28 @@ function FastFood(){
                                     type="range"
                                     onChange={handleRange}
                                     />
-                                </Box>
-                            </Col>
-                            <Col>
-                                <ul style={{display:"flex",flexDirection:"column"}}>
-                                  <li className="m-2"><strong>Corn Dog</strong></li>
-                                  <li className="m-2"><strong>Frites au Chômage</strong></li>
-                                  <li className="m-2"><strong>Nuggets</strong></li>
+
+                                <ul className="liste-produit-dispo">
+                                  <li className="m-2">
+                                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                                      <img className="image-produit-dispo" src={iconCornDog} alt="corn dog icon" width="30" height="30"/> 
+                                      <strong className="titre-produit-dispo">Corn Dog</strong>
+                                    </div>
+                                  </li>
+                                  <li className="m-2">
+                                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                                      <img className="image-produit-dispo" src={friesCheese} alt="corn dog icon" width="30" height="30"/> 
+                                      <strong className="titre-produit-dispo">Frites au Chômage</strong>
+                                    </div>
+                                  </li>
+                                  <li className="m-2">
+                                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                                    <img className="image-produit-dispo" src={nuggets} alt="corn dog icon" width="30" height="30"/>
+                                      <strong className="titre-produit-dispo">Nuggets</strong>
+                                    </div>
+                                  </li>
                                 </ul>
-                            </Col>
+                                </Box>
                         </Col>
                         {produits.produits.filter((val)=>{
                           return (val.produitName.toLowerCase().includes(searchTerm.toLowerCase())) || val.price.includes(searchTerm);

@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import AnimatedText from 'react-animated-text-content';
-import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {Routes, Route, Link} from "react-router-dom";
 import FastFood from './Fast-Food';
 
 //image logo
@@ -32,11 +32,12 @@ function Header(){
 
 
     return(
-        <div style={{height:"800px",width:"100%"}} className="Header">
-                <Container className="h-75">
-                    <Row className="align-middle w-100 ">
-                            <Col className="contenu-gauche-banner col-6"  sm={5} md={5} lg={5} xl={5} xxl={5}>
+        <div style={{height:"800px",width:"auto"}} className="Header">
+                <Container className="h-75 w-auto">
+                    <Row className="align-middle w-auto ">
+                            <Col className="contenu-gauche-banner"  sm={4} md={4} lg={4} xl={4} xxl={4}>
                                 <Col>
+                                <div>
                                     <h1 className='Slogant-banner p-0'>
                                     <strong>
                                         <AnimatedText
@@ -49,7 +50,7 @@ function Header(){
                                             }}
                                             animationType="float"
                                             interval={0.06}
-                                            duration={0.8}
+                                            duration={0.3}
                                             tag="p"
                                             className="animated-paragraph"
                                             includeWhiteSpaces
@@ -61,6 +62,7 @@ function Header(){
                                         </AnimatedText>
                                     </strong>
                                     </h1>
+                                    </div>
                                 </Col>
                                 <Col>
                                 <Link to="Fast-Food">
@@ -70,7 +72,7 @@ function Header(){
                                 </Link>
                                 </Col>
                             </Col>
-                            <Col className="col-6" sm={7} md={7} lg={7} xl={7} xxl={7}>
+                            <Col className="" sm={8} md={8} lg={8} xl={8} xxl={8}>
                                 <div className="image-container-svg">
                                     <motion.svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="item">
                                         <motion.path
@@ -81,8 +83,8 @@ function Header(){
                                         initial="hidden"
                                         animate="visible"
                                         transition={{
-                                            default: { duration: 2, ease: "easeInOut" },
-                                            fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+                                            default: { duration: 1, ease: "easeInOut" },
+                                            fill: { duration: 1, ease: [1, 0, 0.8, 1] }
                                         }}/>
                                     </motion.svg>
                                 </div>

@@ -47,3 +47,63 @@
 .Total{
     margin-top: 20px;
 }
+.title-card{
+    font-size: 17px;
+    margin:0;
+}
+
+@media only screen and (max-width:470px) {
+    .SidebarContainer{
+        background-color: #ffffff;
+        width: 85%;
+        height: 90vh;
+        top:50px;
+        left: 0;
+        position: fixed;
+        transform: translateX(10%);
+        transform: translateY(-165%);
+        transition: all 0.4s;
+        padding: 10px;
+    }
+    .SidebarContainerOpen{
+        transform: translateX(10%);
+    }
+    .photoProduitPanier{
+        background-size: cover;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: 2px;
+        margin-top:25px;
+        box-shadow: -3px -3px 7px rgb(125, 123, 123),3px 3px 5px rgb(255, 255, 255);
+    }
+    .title-card{
+        font-size:14px;
+        width:150px;
+        height:5px;
+    }
+    .bouton-moins{
+        font-size:10px;
+        width:5px;
+        height:25px;
+        display: flex;
+        justify-content: center;
+    }
+    .bouton-plus{
+        font-size:10px;
+        width:5px;
+        height:25px;
+        display: flex;
+        justify-content: center;
+    }
+    .container-footer{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .bouton-delete{
+        margin-left:5px;
+    }
+    .text-prix{
+        font-size:13px;
+    }
+}

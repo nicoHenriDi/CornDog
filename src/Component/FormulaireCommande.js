@@ -134,6 +134,7 @@ function FormulaireCommande(props){
                       aria-labelledby="contained-modal-title-vcenter"
                       centered
                       >
+                      <Form noValidate validated={validated} onSubmit={(event)=>submitForm(event)}>
                       <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter">
                           Formulaire de Commande
@@ -142,7 +143,6 @@ function FormulaireCommande(props){
                       <Modal.Body>
                       <Row>
                         <Col sm={7} md={7} lg={7}>
-                          <Form noValidate validated={validated} onSubmit={(event)=>submitForm(event)}>
                               <Form.Group className="mb-3" controlId="formBasicLastName">
                                   <Form.Label>Nom</Form.Label>
                                   <Form.Control required type="text" placeholder="Nom" 
@@ -201,11 +201,6 @@ function FormulaireCommande(props){
                                   We'll never share your informations with anyone else.
                                   </Form.Text>
                               </Form.Group>
-                              <Form.Group>
-                              <Button variant="danger" type="submit">Submit</Button>
-                              </Form.Group>
-
-                          </Form>
                         </Col>
                         <Col sm={5} md={5} lg={5}>
                           <div style={{boxShadow:"-3px -3px 3px  rgb(96, 96, 96)"}}>
@@ -237,8 +232,12 @@ function FormulaireCommande(props){
                         </Row>
                       </Modal.Body>
                       <Modal.Footer>
+                              <Form.Group>
+                              <Button variant="danger" type="submit">Submit</Button>
+                              </Form.Group>
                         <Button onClick={CloseModalWithoutCommande}>Close</Button>
                       </Modal.Footer>
+                      </Form>
                       </Modal>
                     
                     

@@ -5,8 +5,8 @@
     background-size: cover;
     box-shadow: 5px 5px 5px rgb(51, 51, 51);
     position: relative;
-    bottom: 250px;
-    left:50px;
+    bottom: 130px;
+    left:-40px;
 }
 .Annonce-container{
     width:450px;
@@ -32,8 +32,8 @@
 
 @media only screen and (max-width:470px){
     .Annonce-container {
-        width:380px;
-        height:380px;
+        width:280px;
+        height:280px;
     }
     .PhotoAnnonce{
         width: 280px;
@@ -45,8 +45,8 @@
 }
 @media only screen and (max-width:400px){
     .Annonce-container {
-        width:380px;
-        height:380px;
+        width:280px;
+        height:280px;
     }
     .PhotoAnnonce{
         width: 260px;
@@ -58,8 +58,8 @@
 }
 @media only screen and (max-width:360px){
     .Annonce-container {
-        width:380px;
-        height:380px;
+        width:280px;
+        height:280px;
     }
     .PhotoAnnonce{
         width: 240px;
@@ -71,8 +71,8 @@
 }
 @media only screen and (max-width:340px){
     .Annonce-container {
-        width:350px;
-        height:350px;
+        width:280px;
+        height:280px;
     }
     .PhotoAnnonce{
         width: 220px;
