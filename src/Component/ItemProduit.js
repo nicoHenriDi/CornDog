@@ -32,7 +32,7 @@ function ItemProduit(props){
                                         }}>
                                                 <img className="PhotoChapelurePain" src={"Image/"+props.img} alt={props.alt}/>
                                         </motion.div>
-                                                <Button variant="contained" sx={{bottom:"20px",background:"#B70404",borderRadius:"50%"}} onClick={()=>{buttonAdd(); addItem(props.produit);}}><AddIcon /></Button>
+                                                <Button variant="contained" sx={{bottom:"20px",background:"#B70404",borderRadius:"50%"}} onClick={()=>{addItem(props.produit); buttonAdd();}}><AddIcon /></Button>
                                                 <h5 className='Nom-produit'><strong>{props.name}</strong></h5>
                                                 <h5 className='Prix-Produit'><strong>FCfA {props.price}</strong></h5>
                                         </Col>

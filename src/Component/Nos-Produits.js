@@ -1,16 +1,20 @@
 import {useState,useEffect} from 'react';
+import '../Styles/Nos-Produits.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/esm/Row";
 import {AnimatePresence} from 'framer-motion';
-import '../Styles/Nos-Produits.css';
 import ItemProduit from './ItemProduit';
+import Toast from 'react-bootstrap/Toast';
+import ToastContainer from 'react-bootstrap/ToastContainer';
 
 
 function NosProduits() {
         const [error, setError] =useState(null);
         const [isLoaded, setIsLoaded] =useState(false);
         const [produits, setProduits] = useState([]);
+        const [show, setShow] = useState(false);
+
 
       
         // Remarque : le tableau vide de dépendances [] indique

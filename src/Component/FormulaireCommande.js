@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Styles/FormulaireCommande.css";
 import Modal from 'react-bootstrap/Modal';
@@ -24,13 +24,6 @@ function FormulaireCommande(props){
           const [formAdresse,setFormAdresse]=useState("");
           const [formTelephone,setFormTelephone]=useState("");
           const  { items, cartTotal,emptyCart}  =  useCart () ;
-
-          // const [listProduit,setlistProduit]=useState();
-
-           
-            
-            
-
           const [SubmitBouton,setSubmitBouton]=useState(false);
           const [validated, setValidated] = useState(false);
 
@@ -117,7 +110,8 @@ function FormulaireCommande(props){
                           <Col sm={12} md={12} xl={12} lg={12}>
                           <p className="text-muted text-center" style={{marginTop:"50px"}}>
                             Votre Commande a bien été prise en compte <br/>
-                            Veuillez consulter vos sms vous y trouverez toute les informations relatifs à la commande</p>
+                            Veuillez consulter vos sms vous y trouverez toute les informations relatifs à la commande<br/>
+                            <span style={{color:"red",fontSize:"15px"}}>Le Payement se fera à la livraison</span></p>
                           </Col>
                         </Row>
                       </Modal.Body>
