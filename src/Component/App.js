@@ -8,8 +8,6 @@ import BackgroundDrop from './BackgroundDrop';
 import SideBarCart from './SideBarCart';
 import { CartProvider } from "react-use-cart";
 
-//run test
-
 import NavBar from './Navbar';
 
 function App() {
@@ -37,7 +35,6 @@ function App() {
                 <LoadingComponent />
             :
             <>
-              
               <CartProvider>
               <NavBar />
                         <ButtonFloating openSideBarCart={ToggleSideBarCart}/>
