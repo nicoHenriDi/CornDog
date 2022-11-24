@@ -8,7 +8,7 @@ import BackgroundDrop from './BackgroundDrop';
 import SideBarCart from './SideBarCart';
 import { CartProvider } from "react-use-cart";
 
-//je test
+//run test
 
 import NavBar from './Navbar';
 
