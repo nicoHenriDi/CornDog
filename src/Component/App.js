@@ -6,6 +6,7 @@ import Footer from './Footer';
 import ButtonFloating from './ButtonFloating';
 import BackgroundDrop from './BackgroundDrop';
 import SideBarCart from './SideBarCart';
+import Home from "./Home";
 import { CartProvider } from "react-use-cart";
 
 import NavBar from './Navbar';
