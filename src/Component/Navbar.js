@@ -8,6 +8,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import Home from './Home';
 import FastFood from './Fast-Food';
+// import AdministrationLog from '../Administration/AdministrationLog';
 // import APropos from './APropos';
 
 //Image Logo
@@ -86,7 +87,7 @@ function NavBar(){
             <Routes>
                       <Route path="/" element={<Home />}/>
                       <Route path="/Fast-Food" element={<FastFood />}/>
-                      {/*<Route path="/APropos" element={<APropos />}/>*/}
+                      {/* <Route path="/AdministrationLog" element={<AdministrationLog />}/> */}
             </Routes>
     </BrowserRouter>
     );
