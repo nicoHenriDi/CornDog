@@ -232,9 +232,7 @@ function FormulaireCommande(props){
                         <Button onClick={CloseModalWithoutCommande}>Close</Button>
                       </Modal.Footer>
                       </Form>
-                      </Modal>
-                    
-                    
+                      </Modal>         
             }
           </div>
           

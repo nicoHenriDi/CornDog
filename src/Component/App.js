@@ -10,11 +10,12 @@ import { CartProvider } from "react-use-cart";
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import AdministrationLog from '../Administration/AdministrationLog';
 import NavBar from './Navbar';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 const urlActuel =window.location.href;
 
 function App() {
-  const [loading,setLoading] = useState(false);
+  // const [loading,setLoading] = useState(false);
   //Loading Page before display the home page
   // useEffect(() => {
   //     setLoading(true)
@@ -35,8 +36,11 @@ function App() {
   if(urlActuel==="http://localhost:3000/AdministrationLog"){
       return (
         <div className="App">
-          <AdministrationLog />
+            <ProSidebarProvider>
+            <AdministrationLog />
+            </ProSidebarProvider>
         </div>
+        
       );
   }
   else{
