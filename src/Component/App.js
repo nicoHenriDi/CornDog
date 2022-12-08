@@ -12,7 +12,8 @@ import AdministrationLog from '../Administration/AdministrationLog';
 import NavBar from './Navbar';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 
-const urlActuel =window.location.href;
+const urlActuel =window.location.pathname;
+console.log(urlActuel);
 
 function App() {
   // const [loading,setLoading] = useState(false);
@@ -33,7 +34,7 @@ function App() {
 
  
 
-  if(urlActuel==="http://localhost:3000/AdministrationLog"){
+  if(urlActuel==="/AdministrationLog"){
       return (
         <div className="App">
             <ProSidebarProvider>
