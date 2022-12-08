@@ -1,4 +1,4 @@
-
+import {useState} from 'react';
 import "../Styles/AdministrationCss/Home.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -11,6 +11,13 @@ import ItemCommande from './ItemCommande';
 
 function HomeLog(){
  
+    const [searchCommandeTerm,setSearchCommandeTerm] = useState("");
+
+    const handleSearchCommande = (e)=>{
+        let value =e.target.value;
+        setSearchCommandeTerm(value);
+    }
+
     return(
         <>
             <Container fluid>
@@ -56,12 +63,13 @@ function HomeLog(){
                                     <input type="search" 
                                     placeholder='Recherche' 
                                     className='form-control'
+                                    onChange={handleSearchCommande}
                                     />
                                 </Form.Group>
                             </Form>
                     </Col>
                 </Row>
-                <ItemCommande />
+                <ItemCommande searchtext={searchCommandeTerm}/>
             </Container>
         </>
 //récupérer les informations de commandes directement à travers l'api

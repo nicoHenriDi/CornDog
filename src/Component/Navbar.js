@@ -59,13 +59,15 @@ function NavBar(){
               </Offcanvas.Header>
               <Offcanvas.Body>
                             <Nav className="me-auto" >
-                                <Nav.Link as={Link} to="/" className="text-black"><strong>NM Corn Dog</strong> </Nav.Link>
+                                <Nav.Link as={Link} to="//home" className="text-black"><strong>NM Corn Dog</strong> </Nav.Link>
                                 <Nav.Link as={Link} to="Fast-Food" className="text-black"><strong>Fast-Food</strong></Nav.Link>
                                 {/* <Nav.Link as={Link} to="APropos" className="text-black"><strong>à Propos de Nous</strong></Nav.Link> */}
                             </Nav>
                             <h6 style={{border:"0",background:"white"}} className="ms-3 mt-3 p-0"><i><strong>Contactez nous :</strong></i></h6>
                             <button style={{border:"0",background:"white"}} className="ms-3 p-0">
-                            <InstagramIcon />
+                                <a href="https://instagram.com/n.entreprise.business?igshid=NTdlMDg3MTY=" target="_blank" rel="noreferrer">
+                                <InstagramIcon />
+                                </a>
                             </button>
                           <button style={{border:"0",background:"white"}} className="ms-3 p-0">
                                 <GoogleIcon />
@@ -85,7 +87,7 @@ function NavBar(){
             
             
             <Routes>
-                      <Route path="/" element={<Home />}/>
+                      <Route path="/home" element={<Home />}/>
                       <Route path="/Fast-Food" element={<FastFood />}/>
                       {/* <Route path="/AdministrationLog" element={<AdministrationLog />}/> */}
             </Routes>

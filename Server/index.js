@@ -92,6 +92,21 @@ app.post("/api/insert",(req,res)=>{
 
 });
 
+app.post("/api/insertProduit",(req,res)=>{
+
+    const formNomProduit = req.body.form.formNomProduit;
+    const PrixProduit = req.body.form.PrixProduit;
+    const formDescriptionProduit = req.body.form.formDescriptionProduit;
+    const formStatutProduit = req.body.form.formStatutProduit;
+    const ImageProduit = req.body.form.ImageProduit;
+
+
+    const sqlInsert = "INSERT INTO produitscorn (produitName, price, descriptionProduit, imageProduit, Statut) VALUES (?,?,?,?,?)";
+    db.query(sqlInsert,[formNomProduit,PrixProduit,formDescriptionProduit ,ImageProduit,formStatutProduit], (err,result)=>{
+        console.log(result);
+    });
+});
+
 
 app.listen(3001,()=>{
     console.log("le serveur est bien lancer");

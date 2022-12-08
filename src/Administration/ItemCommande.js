@@ -10,12 +10,13 @@ import CommandeDetail from './CommandeDetail';
 //icons
 
 
-function ItemCommande(){
+function ItemCommande(props){
 
     const [error, setError] =useState(null);
     const [isLoaded, setIsLoaded] =useState(false);
     const [Commandes,setCommandes] = useState([]);
     const [idCommandesFordetail,setIdCommandes]=useState("");
+    const rechercheTerm = props.searchtext;
 
      //For modalcommandeDetail
      const [modalDetailShow, setModalDetailShow] =useState(false);
@@ -57,15 +58,21 @@ function ItemCommande(){
                                 <th>id</th>
                                 <th>NomClient</th>
                                 <th>PrenomClient</th>
-                                <th>TelephoneClient</th>
                                 <th>AdresseClient</th>
+                                <th>TelephoneClient</th>
                                 <th>Date/HeureCommande</th>
                                 <th>Détail</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
-                                Commandes.Commandes.map((Commande,index)=>(
+                                Commandes.Commandes.filter((recherchevalue)=>{
+                                    return (recherchevalue.nomClient.toLowerCase().includes(rechercheTerm) || 
+                                    recherchevalue.prenomClient.toLowerCase().includes(rechercheTerm) || 
+                                    recherchevalue.adresseClient.toLowerCase().includes(rechercheTerm) ||
+                                    recherchevalue.telephoneClient.includes(rechercheTerm)
+                                    )
+                                }).map((Commande,index)=>(
                                         <tr key={index}>
                                             <td>{Commande.id}</td>
                                             <td>{Commande.nomClient}</td>
