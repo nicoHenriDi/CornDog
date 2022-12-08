@@ -59,7 +59,7 @@ function NavBar(){
               </Offcanvas.Header>
               <Offcanvas.Body>
                             <Nav className="me-auto" >
-                                <Nav.Link as={Link} to="//home" className="text-black"><strong>NM Corn Dog</strong> </Nav.Link>
+                                <Nav.Link as={Link} to="/CornDog" className="text-black"><strong>NM Corn Dog</strong> </Nav.Link>
                                 <Nav.Link as={Link} to="Fast-Food" className="text-black"><strong>Fast-Food</strong></Nav.Link>
                                 {/* <Nav.Link as={Link} to="APropos" className="text-black"><strong>à Propos de Nous</strong></Nav.Link> */}
                             </Nav>
@@ -87,7 +87,7 @@ function NavBar(){
             
             
             <Routes>
-                      <Route path="/home" element={<Home />}/>
+                      <Route path="/CornDog" element={<Home />}/>
                       <Route path="/Fast-Food" element={<FastFood />}/>
                       {/* <Route path="/AdministrationLog" element={<AdministrationLog />}/> */}
             </Routes>
