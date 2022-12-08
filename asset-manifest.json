@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CornDog/static/css/main.dfcb799d.css",
-    "main.js": "/CornDog/static/js/main.1d2c31fc.js",
+    "main.js": "/CornDog/static/js/main.ae0e31ef.js",
     "static/js/787.f09350c9.chunk.js": "/CornDog/static/js/787.f09350c9.chunk.js",
     "static/media/corn-dog-Banner-image.png": "/CornDog/static/media/corn-dog-Banner-image.f29d95900e269d388acf.png",
     "static/media/crying-baby-astronaut.gif": "/CornDog/static/media/crying-baby-astronaut.8a73267382c3d61170d3.gif",
@@ -14,11 +14,11 @@
     "static/media/corn-dog-icon.png": "/CornDog/static/media/corn-dog-icon.2ef4d8f1f93c0d976e90.png",
     "index.html": "/CornDog/index.html",
     "main.dfcb799d.css.map": "/CornDog/static/css/main.dfcb799d.css.map",
-    "main.1d2c31fc.js.map": "/CornDog/static/js/main.1d2c31fc.js.map",
+    "main.ae0e31ef.js.map": "/CornDog/static/js/main.ae0e31ef.js.map",
     "787.f09350c9.chunk.js.map": "/CornDog/static/js/787.f09350c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfcb799d.css",
-    "static/js/main.1d2c31fc.js"
+    "static/js/main.ae0e31ef.js"
   ]
 }
