@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfcb799d.css",
-    "main.js": "/static/js/main.25eb39e8.js",
-    "static/js/787.f09350c9.chunk.js": "/static/js/787.f09350c9.chunk.js",
-    "static/media/corn-dog-Banner-image.png": "/static/media/corn-dog-Banner-image.f29d95900e269d388acf.png",
-    "static/media/crying-baby-astronaut.gif": "/static/media/crying-baby-astronaut.8a73267382c3d61170d3.gif",
-    "static/media/logo.gif": "/static/media/logo.6d905eedb191f13c65ec.gif",
-    "static/media/logo-navbar.png": "/static/media/logo-navbar.53f25370430f2e968be0.png",
-    "static/media/PhotoAnnonce1.jpg": "/static/media/PhotoAnnonce1.0b1790f45ca904b9707c.jpg",
-    "static/media/Logo4.png": "/static/media/Logo4.8bc79bf94cf4837fa375.png",
-    "static/media/fried-potatoes.png": "/static/media/fried-potatoes.4bb351cbe08286fc3c52.png",
-    "static/media/nuggets.png": "/static/media/nuggets.4352d6961d4cdc505204.png",
-    "static/media/corn-dog-icon.png": "/static/media/corn-dog-icon.2ef4d8f1f93c0d976e90.png",
-    "index.html": "/index.html",
-    "main.dfcb799d.css.map": "/static/css/main.dfcb799d.css.map",
-    "main.25eb39e8.js.map": "/static/js/main.25eb39e8.js.map",
-    "787.f09350c9.chunk.js.map": "/static/js/787.f09350c9.chunk.js.map"
+    "main.css": "/CornDog/static/css/main.dfcb799d.css",
+    "main.js": "/CornDog/static/js/main.1d2c31fc.js",
+    "static/js/787.f09350c9.chunk.js": "/CornDog/static/js/787.f09350c9.chunk.js",
+    "static/media/corn-dog-Banner-image.png": "/CornDog/static/media/corn-dog-Banner-image.f29d95900e269d388acf.png",
+    "static/media/crying-baby-astronaut.gif": "/CornDog/static/media/crying-baby-astronaut.8a73267382c3d61170d3.gif",
+    "static/media/logo.gif": "/CornDog/static/media/logo.6d905eedb191f13c65ec.gif",
+    "static/media/logo-navbar.png": "/CornDog/static/media/logo-navbar.53f25370430f2e968be0.png",
+    "static/media/PhotoAnnonce1.jpg": "/CornDog/static/media/PhotoAnnonce1.0b1790f45ca904b9707c.jpg",
+    "static/media/Logo4.png": "/CornDog/static/media/Logo4.8bc79bf94cf4837fa375.png",
+    "static/media/fried-potatoes.png": "/CornDog/static/media/fried-potatoes.4bb351cbe08286fc3c52.png",
+    "static/media/nuggets.png": "/CornDog/static/media/nuggets.4352d6961d4cdc505204.png",
+    "static/media/corn-dog-icon.png": "/CornDog/static/media/corn-dog-icon.2ef4d8f1f93c0d976e90.png",
+    "index.html": "/CornDog/index.html",
+    "main.dfcb799d.css.map": "/CornDog/static/css/main.dfcb799d.css.map",
+    "main.1d2c31fc.js.map": "/CornDog/static/js/main.1d2c31fc.js.map",
+    "787.f09350c9.chunk.js.map": "/CornDog/static/js/787.f09350c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dfcb799d.css",
-    "static/js/main.25eb39e8.js"
+    "static/js/main.1d2c31fc.js"
   ]
 }
