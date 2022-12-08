@@ -13,7 +13,6 @@ import NavBar from './Navbar';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 
 const urlActuel =window.location.pathname;
-console.log(urlActuel);
 
 function App() {
   // const [loading,setLoading] = useState(false);
